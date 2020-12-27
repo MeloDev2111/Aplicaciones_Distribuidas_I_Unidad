@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <title>Registro Curso</title>
+        <style>
+            header{
+                text-align: center;
+                font-size: 50px;
+                padding:0.5em 0 0.5em 0;
+                margin: 0 0 1em 0;
+            }
+            form{
+                display: grid;
+                text-align: left;
+                padding: 0em 25% 0em 25%;
+            }
+            span{
+                font-weight:bold;
+            }
+            h2{
+                display: grid;
+                margin: 0 0 1em 0;
+            }
+            #Horario{
+                font-size: 33px;
+            }
+
+            
+        </style>
+    </head>
+
+    <header class="text-white text-center fw-bold bg-dark">
+        <div>REGISTRO CURSO</div>
+    </header>
+
+    <body>
+
+        <form action="">
+    
+            <h2 for="Nombre del Curso">
+                <span>Nombre del curso:</span>
+                <input type="text" id="nombreCurso" autocomplete="name" required
+                maxlength="50"/>
+            </h2>
+            <h2 for="Dia del Curso">
+                <span>Dia:</span>
+                <select name="diaCurso">
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miercoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                    <option>Sabado</option>
+                </select>
+            </h2>
+
+            <h2 for="Horario">
+                <span>Horario:</span>
+                <horario id="Horario">
+                    <input type="time" id="horaEntrada" required/>
+                    a
+                    <input type="time" id="horasSalida" required/>
+                </horario>
+            </h2>
+    
+            <h2 for="Nombre del Profesor">
+                <span>Nombre del Docente:</span>
+                <input type="text" id="nombreDocente" autocomplete="full name" maxlength="50" required/>
+            </h2>
+            <input class="btn btn-dark bg-gradient" type="submit"/><br>
+        </form>
+
+    <footer>
+
+    </footer>
+
+</html>

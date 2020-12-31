@@ -19,7 +19,7 @@
             form{
                 display: grid;
                 text-align: left;
-                padding: 0em 25% 0em 25%;
+                padding: 0 0 0 10%;
             }
             span{
                 font-weight:bold;
@@ -33,26 +33,27 @@
     </header>
 
     <body>
+        <div class = "col-md-4">
+            <form action="agregarAlumno.php" method="POST">
+                <h2 for="Nombre">
+                    <span>Nombres:</span>
+                    <input type="text" name="nombre" autocomplete="name" required
+                    maxlength="50"/>
+                </h2>
+                <h2 for="Apellido">
+                    <span>Apellidos:</span>
+                    <input type="text" name="Apellido" autocomplete="family-name"
+                    maxlength="50" required/>
+                </h2>
+        
+                <h2 for="DNI">
+                    <span>DNI:</span>
+                    <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required/>
+                </h2>
+                <input class="btn btn-danger" type="submit"/><br>
+            </form>
+        </div>
 
-        <form action="">
-    
-            <h2 for="Nombre">
-                <span>Nombres:</span>
-                <input type="text" id="nombre" autocomplete="name" required
-                maxlength="50"/>
-            </h2>
-            <h2 for="Apellido">
-                <span>Apellidos:</span>
-                <input type="text" id="Apellido" autocomplete="family-name"
-                maxlength="50" required/>
-            </h2>
-    
-            <h2 for="DNI">
-                <span>DNI:</span>
-                <input type="DNI" id="DNI" autocomplete="DNI" maxlength="8" required/>
-            </h2>
-            <input class="btn btn-danger" type="submit"/><br>
-        </form>
 
     <footer>
 

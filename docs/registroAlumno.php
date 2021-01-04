@@ -44,7 +44,7 @@ if (file_exists($alv)) {
     <body>
 
         <div class = "col-md-4">
-            <form action="agregarAlumno.php'" method="POST">
+            <form action="agregarAlumno.php" method="POST">
                 <h2 for="Nombre">
                     <span>Nombres:</span>
                     <input type="text" name="nombre" autocomplete="name" required

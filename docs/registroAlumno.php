@@ -1,5 +1,5 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'].'/docs/data/agregarAlumno.php'; 
+include $_SERVER['DOCUMENT_ROOT'].'/data/agregarAlumno.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">

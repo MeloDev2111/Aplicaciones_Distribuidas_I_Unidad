@@ -1,8 +1,11 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/docs/Model/alumno.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/docs/data/conexionCleverCloud.php';
-
-    $alumno1 = new Alumno('13223212',"Pancrasio 1","Apellidonsio 1");
+    $urlAlumno ="data/conexionCleverCloud.php";
+    
+    if (file_exists($urlAlumno)) {
+        include $urlAlumno;
+    }else{
+        echo "YA VALIO PILIN";
+    }
 
     if(isset($_POST["GuardarAlumno"])){
         if (isset($_POST["Nombre"], $_POST["Apelido"], $_POST["DNI"] )){

@@ -18,9 +18,10 @@
     <h3>Projects:</h3>
         <ul>
             <li>
-                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/registroAlumno.php">REGISTRAR ALUMNO</a>
+                <a href="docs/registroAlumno.php">REGISTRAR ALUMNO sin $server</a>
             </li>
             <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/docs/registroAlumno.php">REGISTRAR ALUMNOS CON /DOCS</a></li>
+            <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/registroAlumno.php">REGISTRAR ALUMNOS sin /docs</a></li>
             <li>
                 <a href="recipe-app/index.html">REGISTRAR NOTAS</a>
             </li>

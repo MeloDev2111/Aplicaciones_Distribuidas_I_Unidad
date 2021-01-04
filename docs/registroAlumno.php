@@ -1,5 +1,11 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'].'/docs/data/agregarAlumno.php'; 
+$alv="data/agregarAlumno.php";
+if (file_exists($alv)) {
+    include $alv; 
+}else{
+    echo "ALV YA VALIO PILIN EN REGISTROALUMNO.PHP";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +44,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/docs/data/agregarAlumno.php';
     <body>
 
         <div class = "col-md-4">
-            <form action="agregarAlumno.php" method="POST">
+            <form action="agregarAlumno.php'" method="POST">
                 <h2 for="Nombre">
                     <span>Nombres:</span>
                     <input type="text" name="nombre" autocomplete="name" required

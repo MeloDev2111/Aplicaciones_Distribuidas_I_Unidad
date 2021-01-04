@@ -1,6 +1,6 @@
 <?php
 // Incluimos los datos de conexión y las funciones:
-include("datosCleverCloud.php");
+include($_SERVER['DOCUMENT_ROOT']."/data/datosCleverCloud.php");
 $conn;
 function conectarBase($host,$usuario,$clave,$base){
     $this->conn = mysqli_connect ($host,$usuario,$clave,$base);

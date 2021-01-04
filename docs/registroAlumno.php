@@ -63,7 +63,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/docs/data/agregarAlumno.php';
                     <thead>
                         <tr>
                             <th>DNI</th>
-                            <th>Nombre</th>
+                            <th>Nombres</th>
                             <th>Apellido</th>
                             <th>Acciones</th>
                         </tr>

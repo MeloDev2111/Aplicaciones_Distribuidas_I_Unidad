@@ -15,6 +15,9 @@ POSIBLE ESTRUCTURA
     APP
         data
             agregarAlumno.php
+            .
+            .
+            .
         Includes
             header.php 
             footer.php

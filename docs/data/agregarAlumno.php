@@ -1,6 +1,6 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/Model/alumno.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/data/conexionCleverCloud.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/docs/Model/alumno.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/docs/data/conexionCleverCloud.php';
 
     $alumno1 = new Alumno('13223212',"Pancrasio 1","Apellidonsio 1");
 

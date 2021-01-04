@@ -24,5 +24,6 @@
             <li>
                 <a href="recipe-app/index.html">REGISTRAR NOTAS</a>
             </li>
+            <?php echo $_SERVER['DOCUMENT_ROOT']?>
 </body>
 </html>

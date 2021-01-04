@@ -1,7 +1,9 @@
 <?php 
 $alv="data/agregarAlumno.php";
-if (file_exists($alv)) {
+$alv2="data/conexionCleverCloud.php";
+if (file_exists($alv) && file_exists($alv2)) {
     include $alv; 
+    include $alv2;
 }else{
     echo "ALV YA VALIO PILIN EN REGISTROALUMNO.PHP";
 }
@@ -45,14 +47,14 @@ if (file_exists($alv)) {
 
         <div class = "col-md-4">
             <form action="data/agregarAlumno.php" method="POST">
-                <h2 for="Nombre">
+                <h2 for="Nombres">
                     <span>Nombres:</span>
-                    <input type="text" name="nombre" autocomplete="name" required
+                    <input type="text" name="Nombres" autocomplete="name" required
                     maxlength="50"/>
                 </h2>
                 <h2 for="Apellido">
                     <span>Apellidos:</span>
-                    <input type="text" name="Apellido" autocomplete="family-name"
+                    <input type="text" name="Apellidos" autocomplete="family-name"
                     maxlength="50" required/>
                 </h2>
         
@@ -60,7 +62,7 @@ if (file_exists($alv)) {
                     <span>DNI:</span>
                     <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required/>
                 </h2>
-                <input class="btn btn-danger" type="submit"/><br>
+                <input class="btn btn-danger" name="GuardarAlumno" type="submit"/><br>
             </form>
         </div>
 

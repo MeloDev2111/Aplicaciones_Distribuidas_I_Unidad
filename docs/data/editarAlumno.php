@@ -9,7 +9,7 @@
 
     if (isset($_GET['DNI'])) {
         $id=$_GET['DNI'];
-        $consulta="SELECT * FROM alumnos WHERE DNI=$id";
+        $consulta="SELECT * FROM alumnos WHERE DNI='".$id."'";
         $resultado = mysqli_query($conn,$consulta);
 
         if(mysqli_num_rows($resultado)==1){
@@ -27,7 +27,7 @@
         //Preparamos la orden SQL
         $consulta2="UPDATE alumnos SET nombres='$nombres',
                     apellidos='$apellidos'
-                    WHERE DNI=".$id;
+                    WHERE DNI='".$id."'";
 
         $resultado = mysqli_query($conn,$consulta2);
 
@@ -35,6 +35,8 @@
             $_SESSION['message'] = 'Alumno Actualizado';
             $_SESSION['message_type'] = 'Success';
         } else {
+            print_r($resultado);
+            dice();
             $_SESSION['message'] = 'No se Actualizo';
             $_SESSION['message_type'] = 'Failed';
         }

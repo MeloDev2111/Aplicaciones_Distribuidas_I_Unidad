@@ -61,7 +61,7 @@ INSERT INTO notas(`DNI`, `idCurso`, `nota`) Values
     (74128448,1, 16),
     (74128448,2, 15)
 ;
-
+SELECT * FROM alumnos WHERE DNI="VALIDALO";
 select * from alumnos;
 select * from cursos;
 select * from notas;

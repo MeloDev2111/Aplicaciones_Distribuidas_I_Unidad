@@ -70,8 +70,8 @@ include ("Includes/header.php");
                                     "<td>".$row['nombres']."</td>".
                                     "<td>".$row['apellidos']."</td>".
                                     "<td>".
-                                        "<a href='data/editarAlumno.php?DNI=".$row['DNI']." '>Editar </a>".
-                                        "<a href='data/eliminarAlumno.php?DNI=".$row['DNI']." '>Eliminar </a>".
+                                        "<a href='data/editarAlumno.php?DNI=".$row['DNI']."'>Editar </a>".
+                                        "<a href='data/eliminarAlumno.php?DNI=".$row['DNI']."'>Eliminar </a>".
                                     "</td>".
                                 "</tr>");
                             }

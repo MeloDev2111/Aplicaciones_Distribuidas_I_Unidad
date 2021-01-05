@@ -10,7 +10,7 @@ include ("Includes/header.php");
 ?>
 
 <div class = "container p-2">
-    <div class ="col-md-7">
+    <div class ="col-md-10">
 
         <?php
             if(isset($_SESSION['message'])){
@@ -28,6 +28,7 @@ include ("Includes/header.php");
                     <input type="text" name="nombreCurso" autocomplete="course" required
                     maxlength="50"/>
                 </h2>
+                <br>
                 <h2 class="form-group">
                     <span>Dia:</span>
                     <select name="dia">
@@ -39,7 +40,6 @@ include ("Includes/header.php");
                         <option>Sabado</option>
                     </select>
                 </h2>
-
                 <h2 class="form-group">
                     <span>Horario:</span>
                     <horario id="Horario">
@@ -48,7 +48,7 @@ include ("Includes/header.php");
                         <input type="time" name="horaSalida" required/>
                     </horario>
                 </h2>
-        
+                <br>
                 <h2 class="form-group">
                     <span>Nombre del Docente:</span>
                     <input type="text" name="docente" autocomplete="full name" maxlength="50" required/>
@@ -87,8 +87,8 @@ include ("Includes/header.php");
                                 "<td>".$row['horaSalida']."</td>".
                                 "<td>".$row['docente']."</td>".
                                 "<td>".
-                                    "<a href='data/editarCurso.php?idCurso=".$row['idCurso']." '>Editar </a>".
-                                    "<a href='data/eliminarCurso.php?idCurso=".$row['idCurso']." '>Eliminar </a>".
+                                    "<a href='data/editarCurso.php?idCurso=".$row['idCurso']."'>Editar </a>".
+                                    "<a href='data/eliminarCurso.php?idCurso=".$row['idCurso']."'>Eliminar </a>".
                                 "</td>".
                             "</tr>");
                         }

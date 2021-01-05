@@ -21,9 +21,11 @@
             
             //Aqui ejecutaremos esa orden  
             if (mysqli_query($conn, $consulta)){
-                echo "<p>Registro agregado.</p>";
+                $_SESSION['message'] = 'Alumno Registrado';
+                $_SESSION['message_type'] = 'Success';
             } else {
-                echo "<p>No se agregó...</p>";
+                $_SESSION['message'] = 'No se pudo Registrar';
+                $_SESSION['message_type'] = 'Failed';
             }
         
         } else {

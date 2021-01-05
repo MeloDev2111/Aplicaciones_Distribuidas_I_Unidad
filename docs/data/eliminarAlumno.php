@@ -4,7 +4,7 @@
     if (file_exists($urlAlumno)) {
         include $urlAlumno;
     }else{
-        echo "YA VALIO PILIN EN agregarAlumno.php";
+        echo "YA VALIO PILIN EN eliminarAlumno.php";
     }
 
     if (isset($_GET['DNI'])) {
@@ -13,10 +13,10 @@
         $consulta = "DELETE FROM alumnos WHERE DNI=".$id;
         $resultado = mysqli_query($conn, $consulta);
         if (!$resultado) {
-            $_SESSION['message']='Consulta Fallada';
+            $_SESSION['message']='Eliminación Fallida';
             $_SESSION['message_type']='danger';
         }else{
-            $_SESSION['message']='Tarea Eliminada';
+            $_SESSION['message']='Alumno Eliminado';
             $_SESSION['message_type']='success';
         }
         

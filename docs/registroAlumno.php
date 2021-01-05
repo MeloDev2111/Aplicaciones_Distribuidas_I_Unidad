@@ -42,7 +42,7 @@ include ("Includes/header.php");
                             maxlength="50" required/>
                         </h2>
                         <div class="form-group">
-                            <input class="btn btn-success btn-lg position-relative" name="GuardarAlumno" type="submit" value="Guardar Alumno"/><br>
+                            <input class="btn btn-success btn-lg" name="GuardarAlumno" type="submit" value="Guardar Alumno"/><br>
                         </div>
                     </form>
                 </div>

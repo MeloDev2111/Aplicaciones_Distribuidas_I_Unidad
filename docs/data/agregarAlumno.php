@@ -1,12 +1,13 @@
 <?php
     $urlAlumno ="conexionCleverCloud.php";
-    
+
     if (file_exists($urlAlumno)) {
         include $urlAlumno;
     }else{
         echo "YA VALIO PILIN EN agregarAlumno.php";
     }
 
+    //REEEMPLAZAR ECHOS CON SESSION MESSAGE
     if(isset($_POST["GuardarAlumno"])){
         if (isset($_POST["Nombres"], $_POST["Apellidos"], $_POST["DNI"] )){
 
@@ -26,11 +27,12 @@
             }
         
         } else {
-            $dir= $_SERVER['DOCUMENT_ROOT'].'/docs/registrarAlumno.php';
             echo "<p>Por favor, complete el <a href='$dir'>formulario</a></p>";
         }
     }else{
         echo "No llego xd";
     }
+    
+    header('Location: ../registroAlumno.php');
 
     ?>

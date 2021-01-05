@@ -1,74 +1,57 @@
 <?php 
-$alv="data/agregarAlumno.php";
-$alv2="data/conexionCleverCloud.php";
-if (file_exists($alv) && file_exists($alv2)) {
-    include $alv; 
-    include $alv2;
+$DirConexionBD="data/conexionCleverCloud.php";
+if (file_exists($DirConexionBD)) {
+    include $DirConexionBD; 
 }else{
     echo "ALV YA VALIO PILIN EN REGISTROALUMNO.PHP";
 }
 
+include ("Includes/header.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <title>Registro Alumno</title>
-        <style>
-            header{
-                text-align: center;
-                font-size: 50px;
-                padding:0.5em 0 0.5em 0;
-                margin: 0 0 1em 0;
-            }
-            h2{
-                display: grid;
-                margin: 0 0 1em 0;
-            }
-            form{
-                display: grid;
-                text-align: left;
-                padding: 0em 25% 0em 25%;
-            }
-            span{
-                font-weight:bold;
-            }
-            
-        </style>
-    </head>
 
-    <header class="card-text text-white text-center fw-bold bg-danger">
-        <div>REGISTRO ALUMNO</div>
-    </header>
+    <div class = "container p-2">
+        <div class = "row">
+            <div class ="col-md-5">
 
-    <body>
+                <?php
+                    if(isset($_SESSION['message'])){
+                ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <?="<strong>".$_SESSION['message']."</strong>"?>
+                        <button type="button" class="btn-close" onClick="<?php session_destroy() ?>" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php } ?>
 
-        <div class = "col-md-4">
-            <form action="data/agregarAlumno.php" method="POST">
-                <h2 for="Nombres">
-                    <span>Nombres:</span>
-                    <input type="text" name="Nombres" autocomplete="name" required
-                    maxlength="50"/>
-                </h2>
-                <h2 for="Apellido">
-                    <span>Apellidos:</span>
-                    <input type="text" name="Apellidos" autocomplete="family-name"
-                    maxlength="50" required/>
-                </h2>
-        
-                <h2 for="DNI">
-                    <span>DNI:</span>
-                    <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required/>
-                </h2>
-                <input class="btn btn-danger" name="GuardarAlumno" type="submit"/><br>
-            </form>
-        </div>
+                <div class = "card card-body">
+                    <form action="data/agregarAlumno.php" method="POST">
 
-        <div class="col-md-8">
-                <table class = "table table-bordered">
-                    <thead>
+                        <h2 class="form-group">
+                            <span>DNI:</span>
+                            <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required/>
+                        </h2>
+
+                        <h2 class="form-group">
+                            <span>Nombres:</span>
+                            <input type="text" name="Nombres" autocomplete="name" required
+                            maxlength="50"/>
+                        </h2>
+
+                        <h2 class="form-group">
+                            <span>Apellidos:</span>
+                            <input type="text" name="Apellidos" autocomplete="family-name"
+                            maxlength="50" required/>
+                        </h2>
+                        <div class="form-group">
+                            <input class="btn btn-success btn-lg position-relative" name="GuardarAlumno" type="submit" value="Guardar Alumno"/><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <h2>REGISTROS REALIZADOS</h2>
+                <table class = "table table-hover">
+                    <thead class="table-danger">
                         <tr>
                             <th>DNI</th>
                             <th>Nombres</th>
@@ -87,8 +70,8 @@ if (file_exists($alv) && file_exists($alv2)) {
                                     "<td>".$row['nombres']."</td>".
                                     "<td>".$row['apellidos']."</td>".
                                     "<td>".
-                                        "<a href=' editarAlumno.php?id=".$row['DNI']." '>Editar </a>".
-                                        "<a href=' eliminarAlumno.php?id=".$row['DNI']." '>Eliminar </a>".
+                                        "<a href='data/editarAlumno.php?DNI=".$row['DNI']." '>Editar </a>".
+                                        "<a href='data/eliminarAlumno.php?DNI=".$row['DNI']." '>Eliminar </a>".
                                     "</td>".
                                 "</tr>");
                             }
@@ -96,16 +79,7 @@ if (file_exists($alv) && file_exists($alv2)) {
                     </tbody>
                 </table>
             </div>
-            <?php echo $_SERVER['DOCUMENT_ROOT']?>
+        </div>
+    </div>
 
-        <!----scripts---->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    </body>
-
-    <footer>
-
-    </footer>
-
-</html>
+<?php include ("Includes/footer.php"); ?>

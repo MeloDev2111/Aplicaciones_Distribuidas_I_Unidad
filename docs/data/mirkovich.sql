@@ -65,3 +65,13 @@ SELECT * FROM alumnos WHERE DNI="VALIDALO";
 select * from alumnos;
 select * from cursos;
 select * from notas;
+
+select 
+	idNota,
+    cursos.nombreCurso,
+    concat(alumnos.nombres," ",alumnos.apellidos) as "nombreAlumno",
+    nota
+from notas
+inner join alumnos on notas.DNI = alumnos.DNI
+inner join cursos on notas.idCurso = cursos.idCurso;
+

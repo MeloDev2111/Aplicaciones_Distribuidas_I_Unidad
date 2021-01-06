@@ -6,10 +6,12 @@
     }else{
         echo "YA VALIO PILIN EN cargarAlumnos.php";
     }
+
+    include ("../Includes/header.php");
 ?>
 
 <div class="col-md-7">
-    <h2>REGISTROS REALIZADOS</h2>
+    <h2>REGISTROS DE ALUMNOS</h2>
     <table class = "table table-hover">
         <thead class="table-danger">
             <tr>
@@ -30,12 +32,14 @@
                         "<td>".$row['nombres']."</td>".
                         "<td>".$row['apellidos']."</td>".
                         "<td>".
-                            "<a href='data/editarAlumno.php?DNI=".$row['DNI']."'>Editar </a>".
-                            "<a href='data/eliminarAlumno.php?DNI=".$row['DNI']."'>Eliminar </a>".
+                            "<a href='../registroNota.php?DNI=".$row['DNI']."'>ELEGIR </a>".
                         "</td>".
                     "</tr>");
                 }
             ?>
         </tbody>
     </table>
+    //BOTON QUE CANCELA EN DANGER, SOLO VUELVE A LA PAGINA ANTERIOR
 </div>
+
+<?php include ("../Includes/footer.php");?>

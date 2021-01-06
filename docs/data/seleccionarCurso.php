@@ -6,9 +6,11 @@
     }else{
         echo "YA VALIO PILIN EN cargarCursos.php";
     }
+
+    include ("../Includes/header.php");
 ?>
 <div class="col-md-10">
-    <h2>REGISTROS REALIZADOS</h2>
+    <h2>REGISTROS DE CURSOS</h2>
     <table class = "table table-hover">
         <thead class="table-danger">
             <tr>
@@ -33,12 +35,15 @@
                         "<td>".$row['horaSalida']."</td>".
                         "<td>".$row['docente']."</td>".
                         "<td>".
-                            "<a href='data/editarCurso.php?idCurso=".$row['idCurso']."'>Editar </a>".
-                            "<a href='data/eliminarCurso.php?idCurso=".$row['idCurso']."'>Eliminar </a>".
+                            "<a href='../registroNota.php?idCurso=".$row['idCurso']."'>ELEGIR </a>".
                         "</td>".
                     "</tr>");
                 }
             ?>
         </tbody>
     </table>
+
+    //BOTON DE REGRESO QUE NO SOLO REDIRECCIONA CON DANGER
 </div>
+
+<?php include ("../Includes/footer.php");?>

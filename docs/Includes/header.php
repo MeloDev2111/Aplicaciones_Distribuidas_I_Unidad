@@ -12,7 +12,7 @@
     <body>
         <div class="navbar navbar-dark bg-dark justify-content-center">
             <a href="/index.php" class="navbar-brand fs-1"> 
-            Presentación
+            Nosotros |
             </a>
 
             <a href="/docs/registroAlumno.php" class="navbar-brand fs-1"> 
@@ -25,5 +25,9 @@
 
             <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
             Notas
+            </a>
+
+            <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
+            Promedios
             </a>
     </div>

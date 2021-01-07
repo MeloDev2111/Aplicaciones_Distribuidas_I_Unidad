@@ -165,10 +165,10 @@ include ("Includes/header.php");
                             "<td>".$row['nombreAlumno']."</td>".
                             "<td>".$row['Promedio']."</td>".
                             "<td>".
-                                "<a href='operaciones/editarNota.php?idCurso=".$row['idCurso']."& 
-                                        DNI=".$row['DNI']."'>Editar </a>".
-                                "<a href='operaciones/eliminarNota.php?idNota=".$row['idCurso']."& 
-                                DNI=".$row['DNI']." '>Eliminar </a>".
+                                "<a href='operaciones/editarNota.php?idCurso=".$row['idCurso']."&". 
+                                        "DNI=".$row['DNI']."'>Editar </a>".
+                                "<a href='operaciones/eliminarNota.php?idCurso=".$row['idCurso']."&". 
+                                "DNI=".$row['DNI']." '>Eliminar </a>".
                             "</td>".
                         "</tr>");
                     }

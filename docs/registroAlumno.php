@@ -27,7 +27,7 @@ include ("Includes/header.php");
 
                         <h2 class="form-group">
                             <span>DNI:</span>
-                            <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required/>
+                            <input type="number" name="DNI" autocomplete="DNI" max="99999999" min="10000000" required/>
                         </h2>
 
                         <h2 class="form-group">

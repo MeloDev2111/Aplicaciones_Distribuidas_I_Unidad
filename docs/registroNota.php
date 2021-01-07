@@ -80,30 +80,48 @@ include ("Includes/header.php");
             </div>
         <?php } ?>
         <div class = "card card-body">
-            <form action="data/agregarNota.php?DNI=<?php echo $id ?>&idCurso=<?php echo $idCurso ?>" method="POST">
+            <form action="operaciones/agregarNota.php?DNI=<?php echo $id ?>&idCurso=<?php echo $idCurso ?>" method="POST">
         
                 <div class="input-group input-group-lg mb-3">
-                    <span class ="input-group-text" id="inputGroup-sizing-lg">Nombre del Curso:</span>
+                    <span class ="input-group-text" id="inputGroup-sizing-lg">Curso:</span>
                     <input class = "form-control bg-light" type="text" autocomplete="course" maxlength="50"
                     <?php echo ($nombreCurso) ? "value='$nombreCurso'" : "" ?> 
                     style="pointer-events: none;" required />
 
-                    <a class="btn btn-outline-success" href="data/seleccionarCurso.php" role="button">+</a>
+                    <a class="btn btn-outline-success" href="operaciones/seleccionarCurso.php" role="button">+</a>
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
-                    <span class ="input-group-text" id="inputGroup-sizing-lg">Nombre del Alumno:</span>
+                    <span class ="input-group-text" id="inputGroup-sizing-lg">Alumno:</span>
                     <input class = "form-control bg-light" type="text" autocomplete="full name" 
                     maxlength="50" <?php echo ($nombres) ? "value ='$nombres $apellidos'" : "" ?> 
                     style="pointer-events: none;" required/>
 
-                    <a class="btn btn-outline-success" href="data/seleccionarAlumno.php" role="button">+</a>
+                    <a class="btn btn-outline-success" href="operaciones/seleccionarAlumno.php" role="button">+</a>
                 </div>
 
 
                 <div class="input-group input-group-lg mb-3" >
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Nota:</span>
-                    <input type="text" class="form-control" name="nota" autocomplete="calification" 
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Nota 1:</span>
+                    <input type="text" class="form-control" name="nota1" autocomplete="calification" 
+                    maxlength="5" required />
+                </div>
+
+                <div class="input-group input-group-lg mb-3" >
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Nota 2:</span>
+                    <input type="text" class="form-control" name="nota2" autocomplete="calification" 
+                    maxlength="5" required />
+                </div>
+
+                <div class="input-group input-group-lg mb-3" >
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Nota 3:</span>
+                    <input type="text" class="form-control" name="nota3" autocomplete="calification" 
+                    maxlength="5" required />
+                </div>
+
+                <div class="input-group input-group-lg mb-3" >
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Nota 4:</span>
+                    <input type="text" class="form-control" name="nota4" autocomplete="calification" 
                     maxlength="5" required />
                 </div>
 
@@ -116,35 +134,41 @@ include ("Includes/header.php");
     </div>
 
     <div class="col-md-10">
-        <h2>REGISTROS DE CURSOS</h2>
+        <h2>REGISTROS DE NOTAS</h2>
         <table class = "table table-hover">
             <thead class="table-danger">
                 <tr>
-                    <th>idNota</th>
+                    <th>idCurso</th>
                     <th>Curso</th>
                     <th>Alumno</th>
-                    <th>Nota</th>
+                    <th>Promedio</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    $consulta = "select idNota,cursos.nombreCurso,concat(alumnos.nombres,
-                                    ' ',alumnos.apellidos) as 'nombreAlumno', nota
+                    $consulta = "select cursos.nombreCurso,concat(alumnos.nombres,
+                                    ' ',alumnos.apellidos) as 'nombreAlumno', 
+                                    (nota1+nota2+nota3+nota4)/4 as 'Promedio',
+                                    notas.DNI,
+                                    notas.idCurso
                         from notas
                         inner join alumnos on notas.DNI = alumnos.DNI
-                        inner join cursos on notas.idCurso = cursos.idCurso;";
+                        inner join cursos on notas.idCurso = cursos.idCurso
+                        order by idCurso;";
                     $resultado = mysqli_query($conn,$consulta);
                     while($row = mysqli_fetch_array($resultado)){
                         echo(
                         "<tr>".
-                            "<td>".$row['idNota']."</td>".
+                            "<td>".$row['idCurso']."</td>".
                             "<td>".$row['nombreCurso']."</td>".
                             "<td>".$row['nombreAlumno']."</td>".
-                            "<td>".$row['nota']."</td>".
+                            "<td>".$row['Promedio']."</td>".
                             "<td>".
-                                "<a href='data/editarNota.php?idNota=".$row['idNota']."'>Editar </a>".
-                                "<a href='data/eliminarNota.php?idNota=".$row['idNota']."'>Eliminar </a>".
+                                "<a href='operaciones/editarNota.php?idCurso=".$row['idCurso']."& 
+                                        DNI=".$row['DNI']."'>Editar </a>".
+                                "<a href='operaciones/eliminarNota.php?idNota=".$row['idCurso']."& 
+                                DNI=".$row['DNI']." '>Eliminar </a>".
                             "</td>".
                         "</tr>");
                     }

@@ -26,8 +26,4 @@
             <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
             Notas
             </a>
-
-            <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
-            Promedios
-            </a>
     </div>

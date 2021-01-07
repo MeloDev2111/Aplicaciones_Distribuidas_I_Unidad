@@ -21,7 +21,7 @@ include ("Includes/header.php");
             </div>
         <?php } ?>
         <div class = "card card-body">
-            <form action="data/agregarCurso.php" method="POST">
+            <form action="operaciones/agregarCurso.php" method="POST">
         
                 <h2 class="form-group">
                     <span>Nombre del curso:</span>
@@ -87,8 +87,8 @@ include ("Includes/header.php");
                                 "<td>".$row['horaSalida']."</td>".
                                 "<td>".$row['docente']."</td>".
                                 "<td>".
-                                    "<a href='data/editarCurso.php?idCurso=".$row['idCurso']."'>Editar </a>".
-                                    "<a href='data/eliminarCurso.php?idCurso=".$row['idCurso']."'>Eliminar </a>".
+                                    "<a href='operaciones/editarCurso.php?idCurso=".$row['idCurso']."'>Editar </a>".
+                                    "<a href='operaciones/eliminarCurso.php?idCurso=".$row['idCurso']."'>Eliminar </a>".
                                 "</td>".
                             "</tr>");
                         }

@@ -1,32 +1,35 @@
 <?php
-    $urlAlumno ="conexionCleverCloud.php";
+    $DirConexionBD="../data/conexionCleverCloud.php";
 
-    if (file_exists($urlAlumno)) {
-        include $urlAlumno;
+    if (file_exists($DirConexionBD)) {
+        include $DirConexionBD;
     }else{
         echo "YA VALIO PILIN EN agregarCurso.php";
     }
 
     //REEEMPLAZAR ECHOS CON SESSION MESSAGE
     if(isset($_POST["GuardarNota"])){
-        if (isset($_POST["nota"] )){
-            $nota = $_POST["nota"];
+        if (isset($_POST["nota1"], $_POST["nota2"], $_POST["nota3"], $_POST["nota4"],)){
+            $nota1 = $_POST["nota1"];
+            $nota2 = $_POST["nota2"];
+            $nota3 = $_POST["nota3"];
+            $nota4 = $_POST["nota4"];
 
             if (isset($_GET['DNI'], $_GET['idCurso'])) {
                 $id = $_GET['DNI'];
                 $idCurso=$_GET['idCurso'];
 
                 //Preparamos la orden SQL
-                $consulta = "INSERT INTO notas(`DNI`, `idCurso`, `nota`) Values
-                ('$id','$idCurso','$nota')";
-                print_r($consulta);
+                $consulta = "INSERT INTO notas Values
+                ('$id','$idCurso','$nota1','$nota2','$nota3','$nota4')";
+                
                 //Aqui ejecutaremos esa orden  
                 if (mysqli_query($conn, $consulta)){
-                $_SESSION['message'] = 'Nota Registrada';
-                $_SESSION['message_type'] = 'Success';
+                    $_SESSION['message'] = 'Nota Registrada';
+                    $_SESSION['message_type'] = 'Success';
                 } else {
-                $_SESSION['message'] = 'No se pudo Registrar';
-                $_SESSION['message_type'] = 'Failed';
+                    $_SESSION['message'] = 'No se pudo Registrar';
+                    $_SESSION['message_type'] = 'Failed';
                 }
             }else{
                 echo("No llegaron las claves foraneas");

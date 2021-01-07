@@ -1,8 +1,8 @@
 <?php
-    $urlAlumno ="conexionCleverCloud.php";
+    $DirConexionBD="../data/conexionCleverCloud.php";
 
-    if (file_exists($urlAlumno)) {
-        include $urlAlumno;
+    if (file_exists($DirConexionBD)) {
+        include $DirConexionBD;
     }else{
         echo "YA VALIO PILIN EN agregarAlumno.php";
     }

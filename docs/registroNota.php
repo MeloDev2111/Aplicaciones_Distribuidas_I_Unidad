@@ -131,7 +131,7 @@ include ("Includes/header.php");
     <div class="col-md-10">
         <h2>REGISTROS DE NOTAS</h2>
         <table class = "table table-hover">
-            <thead class="table-danger">
+            <thead class="table-primary">
                 <tr>
                     <th>idCurso</th>
                     <th>Curso</th>

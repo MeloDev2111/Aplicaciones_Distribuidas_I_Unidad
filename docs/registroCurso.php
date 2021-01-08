@@ -49,7 +49,7 @@ include ("Includes/header.php");
                     <input type="text" name="docente" autocomplete="full name" maxlength="50" required/>
                 </h2>
                 <div class="form-group ">
-                    <input class="btn btn-dark btn-lg bg-gradient" name="GuardarCurso" type="submit" value="Guardar Curso"/>
+                    <input class="btn btn-danger btn-lg bg-gradient" name="GuardarCurso" type="submit" value="Guardar Curso"/>
                 </div>
             </form>
         </div>

@@ -12,18 +12,18 @@
     <body>
         <div class="navbar navbar-dark bg-dark justify-content-center">
             <a href="/index.php" class="navbar-brand fs-1"> 
-            Nosotros |
+            Nosotros | &nbsp;
             </a>
-
+            <em>
             <a href="/docs/registroAlumno.php" class="navbar-brand fs-1"> 
-            Alumnos
+            &nbsp; Alumnos 
             </a>
 
             <a href="/docs/registroCurso.php" class="navbar-brand fs-1"> 
-            Cursos
+            &nbsp; Cursos 
             </a>
 
             <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
-            Notas
+            &nbsp; Notas 
             </a>
-    </div>
+        </div>

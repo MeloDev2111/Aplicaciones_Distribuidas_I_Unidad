@@ -30,25 +30,30 @@
         $horaSalida = $_POST['horaSalida'];
         $docente = $_POST['docente'];
 
+        if($horaEntrada>$horaSalida){
+            $_SESSION['message'] = 'Hora de Entrada > Hora de Salida!';
+            $_SESSION['message_type'] = 'Advice';
+        }else{
+            //Preparamos la orden SQL
+            $consulta2="UPDATE cursos SET nombreCurso='$nombreCurso',
+                        dia='$dia',
+                        horaEntrada='$horaEntrada',
+                        horaSalida='$horaSalida',
+                        docente='$docente'
+                        WHERE idCurso=".$id;
 
-        //Preparamos la orden SQL
-        $consulta2="UPDATE cursos SET nombreCurso='$nombreCurso',
-                    dia='$dia',
-                    horaEntrada='$horaEntrada',
-                    horaSalida='$horaSalida',
-                    docente='$docente'
-                    WHERE idCurso=".$id;
+            $resultado = mysqli_query($conn,$consulta2);
 
-        $resultado = mysqli_query($conn,$consulta2);
-
-        if ($resultado){
-            $_SESSION['message'] = 'Curso Actualizado';
-            $_SESSION['message_type'] = 'Success';
-        } else {
-            $_SESSION['message'] = 'No se Actualizo';
-            $_SESSION['message_type'] = 'Failed';
+            if ($resultado){
+                $_SESSION['message'] = 'Curso Actualizado';
+                $_SESSION['message_type'] = 'Success';
+            } else {
+                $_SESSION['message'] = 'No se Actualizo';
+                $_SESSION['message_type'] = 'Failed';
+            }
         }
-        header('Location: ../registroCurso.php'); 
+        
+        header('Location: ../registroCurso.php');
     }
 ?>
 
@@ -56,14 +61,6 @@
 
 <div class = "container p-2">
     <div class ="col-md-10">
-        <?php
-            if(isset($_SESSION['message'])){
-        ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <?="<strong>".$_SESSION['message']."</strong>"?>
-                <button type="button" class="btn-close" onClick="<?php session_destroy() ?>" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php } ?>
         <div class = "card card-body">
             <form action="editarCurso.php?idCurso=<?php echo $_GET['idCurso'] ?>" method="POST">
         
@@ -93,9 +90,11 @@
                 <h2 class="form-group">
                     <span>Horario:</span>
                     <horario id="Horario">
-                        <input type="time" name="horaEntrada" value="<?php echo $horaEntrada?>" required/>
+                        <input type="time" name="horaEntrada" min="08:00" max="22:00" 
+                        value="<?php echo $horaEntrada?>" required/>
                         a
-                        <input type="time" name="horaSalida" value="<?php echo $horaSalida?>" required/>
+                        <input type="time" name="horaSalida" min="08:00" max="22:00"  
+                        value="<?php echo $horaSalida?>" required/>
                     </horario>
                 </h2>
                 <br>

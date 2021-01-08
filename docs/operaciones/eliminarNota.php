@@ -17,10 +17,10 @@
 
         if (!$resultado) {
             $_SESSION['message']='Eliminación Fallida';
-            $_SESSION['message_type']='danger';
+            $_SESSION['message_type']='Failed';
         }else{
             $_SESSION['message']='Notas Eliminadas';
-            $_SESSION['message_type']='success';
+            $_SESSION['message_type']='Success';
         }
         
     }else{

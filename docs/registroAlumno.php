@@ -12,15 +12,9 @@ include ("Includes/header.php");
     <div class = "container p-2">
         <div class = "row">
             <div class ="col-md-5">
-
                 <?php
-                    if(isset($_SESSION['message'])){
+                    include ("popup.php")
                 ?>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <?="<strong>".$_SESSION['message']."</strong>"?>
-                        <button type="button" class="btn-close" onClick="<?php session_destroy() ?>" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                <?php } ?>
 
                 <div class = "card card-body">
                     <form action="operaciones/agregarAlumno.php" method="POST">
@@ -49,7 +43,7 @@ include ("Includes/header.php");
             </div>
 
             <div class="col-md-7">
-                <h2>REGISTROS REALIZADOS</h2>
+                <h2>REGISTROS DE ALUMNOS</h2>
                 <table class = "table table-hover">
                     <thead class="table-danger">
                         <tr>

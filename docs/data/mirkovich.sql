@@ -62,7 +62,6 @@ INSERT INTO notas Values
 	(32885823,1,14,13,12,15),
     (74128448,1,16,12,15,11)
 ;
-SELECT * FROM alumnos WHERE DNI="VALIDALO";
 
 select * from alumnos;
 select * from cursos;
@@ -81,4 +80,14 @@ inner join alumnos on notas.DNI = alumnos.DNI
 inner join cursos on notas.idCurso = cursos.idCurso
 #group by notas.DNI, notas.idCurso
 ;
+SELECT notas.*,
+		cursos.nombreCurso,
+		concat(alumnos.nombres," ",alumnos.apellidos) as "nombreAlumno"
+FROM notas 
+inner join alumnos on notas.DNI = alumnos.DNI
+inner join cursos on notas.idCurso = cursos.idCurso
+WHERE notas.DNI="74128448" AND notas.idCurso="1";
 
+UPDATE notas SET nota1='10',
+nota2='10',nota3='20',nota4='10'
+WHERE DNI='' AND idCurso="";

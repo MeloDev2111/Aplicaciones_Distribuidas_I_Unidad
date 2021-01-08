@@ -16,10 +16,10 @@
             print_r($resultado);
             dice();
             $_SESSION['message']='Eliminación Fallida';
-            $_SESSION['message_type']='danger';
+            $_SESSION['message_type']='Failed';
         }else{
             $_SESSION['message']='Alumno Eliminado';
-            $_SESSION['message_type']='success';
+            $_SESSION['message_type']='Success';
         }
         
         header('Location: ../registroAlumno.php');   

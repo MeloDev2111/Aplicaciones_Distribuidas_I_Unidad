@@ -70,15 +70,10 @@ include ("Includes/header.php");
 
 <div class = "container p-2">
     <div class ="col-md-10">
-
         <?php
-            if(isset($_SESSION['message'])){
+            include ("popup.php")
         ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <?="<strong>".$_SESSION['message']."</strong>"?>
-                <button type="button" class="btn-close" onClick="<?php session_destroy() ?>" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php } ?>
+        
         <div class = "card card-body">
             <form action="operaciones/agregarNota.php?DNI=<?php echo $id ?>&idCurso=<?php echo $idCurso ?>" method="POST">
         
@@ -103,25 +98,25 @@ include ("Includes/header.php");
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 1:</span>
-                    <input type="text" class="form-control" name="nota1" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota1" autocomplete="calification" 
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 2:</span>
-                    <input type="text" class="form-control" name="nota2" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota2" autocomplete="calification" 
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 3:</span>
-                    <input type="text" class="form-control" name="nota3" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota3" autocomplete="calification" 
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 4:</span>
-                    <input type="text" class="form-control" name="nota4" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota4" autocomplete="calification" 
                     maxlength="5" required />
                 </div>
 

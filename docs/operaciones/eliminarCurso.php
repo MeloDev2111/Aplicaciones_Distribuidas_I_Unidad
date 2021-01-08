@@ -14,10 +14,10 @@
         $resultado = mysqli_query($conn, $consulta);
         if (!$resultado) {
             $_SESSION['message']='Eliminación Fallida';
-            $_SESSION['message_type']='danger';
+            $_SESSION['message_type']='Failed';
         }else{
             $_SESSION['message']='Curso Eliminado';
-            $_SESSION['message_type']='success';
+            $_SESSION['message_type']='Success';
         }
         
         header('Location: ../registroCurso.php');   

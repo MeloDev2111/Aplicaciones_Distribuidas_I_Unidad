@@ -35,8 +35,6 @@
             $_SESSION['message'] = 'Alumno Actualizado';
             $_SESSION['message_type'] = 'Success';
         } else {
-            print_r($resultado);
-            dice();
             $_SESSION['message'] = 'No se Actualizo';
             $_SESSION['message_type'] = 'Failed';
         }
@@ -53,7 +51,7 @@
 
                 <h2 class="form-group">
                     <span>DNI:</span>
-                    <input type="DNI" name="DNI" autocomplete="DNI" maxlength="8" minlength="8" required
+                    <input type="number" name="DNI" autocomplete="DNI" max="99999999" min="10000000" required
                     value="<?php echo $id?>"/>
                 </h2>
 

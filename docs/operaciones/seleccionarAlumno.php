@@ -40,7 +40,6 @@
                 ?>
             </tbody>
         </table>
-        //BOTON QUE CANCELA EN DANGER, SOLO VUELVE A LA PAGINA ANTERIOR
     </div>
 </div>
 

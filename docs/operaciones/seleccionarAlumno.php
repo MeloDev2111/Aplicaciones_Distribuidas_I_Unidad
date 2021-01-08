@@ -14,7 +14,7 @@
     <div class="col-md-10">
         <h2>REGISTROS DE ALUMNOS</h2>
         <table class = "table table-hover">
-            <thead class="table-danger">
+            <thead class="table-success">
                 <tr>
                     <th>DNI</th>
                     <th>Nombres</th>

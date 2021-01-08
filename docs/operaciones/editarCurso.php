@@ -104,7 +104,7 @@
                     value="<?php echo $docente?>"/>
                 </h2>
                 <div class="form-group ">
-                    <input class="btn btn-dark btn-lg bg-gradient" name="actualizarCurso" type="submit" value="Actualizar Curso"/>
+                    <input class="btn btn-danger btn-lg bg-gradient" name="actualizarCurso" type="submit" value="Actualizar Curso"/>
                 </div>
             </form>
         </div>

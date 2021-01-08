@@ -30,8 +30,8 @@
         $horaSalida = $_POST['horaSalida'];
         $docente = $_POST['docente'];
 
-        if($horaEntrada>$horaSalida){
-            $_SESSION['message'] = 'Hora de Entrada > Hora de Salida!';
+        if($horaEntrada>=$horaSalida){
+            $_SESSION['message'] = 'Hora de Entrada >= Hora de Salida!?';
             $_SESSION['message_type'] = 'Advice';
         }else{
             //Preparamos la orden SQL

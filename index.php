@@ -33,21 +33,21 @@
 
         <!-- Team item -->
         <div class="col-xl-3 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" height="100" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="docs/images/Diaz_Diaz_Melio_0201814005.jpg" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Diaz Diaz Melio</h5><span class="small text-uppercase text-muted fw-bold">0201814005</span>
             </div>
         </div><!-- End -->
 
         <!-- Team item -->
         <div class="col-xl-3 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" height="100" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="docs/images/Garcia_Romero_Antonio_0201814022.jpg" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Garcia R. Antonio</h5><span class="small text-uppercase text-muted">0201814022</span>
             </div>
         </div><!-- End -->
 
         <!-- Team item -->
         <div class="col-xl-3 col-sm-6 mb-5">
-            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-7.jpg" height="100" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="docs/images/Lujan_Rojas_Nelvin_0201814007.jpg" width="150" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Lujan Rojas Nelvin</h5><span class="small text-uppercase text-muted">0201814007</span>
             </div>
         </div><!-- End -->

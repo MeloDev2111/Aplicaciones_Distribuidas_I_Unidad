@@ -90,10 +90,10 @@
                 <h2 class="form-group">
                     <span>Horario:</span>
                     <horario id="Horario">
-                        <input type="time" name="horaEntrada" min="08:00" max="22:00" 
+                        <input type="time" name="horaEntrada" min="08:00" max="22:00" step="300"
                         value="<?php echo $horaEntrada?>" required/>
                         a
-                        <input type="time" name="horaSalida" min="08:00" max="22:00"  
+                        <input type="time" name="horaSalida" min="08:00" max="22:00"  step="300"
                         value="<?php echo $horaSalida?>" required/>
                     </horario>
                 </h2>

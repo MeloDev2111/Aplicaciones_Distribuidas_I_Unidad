@@ -38,9 +38,9 @@ include ("Includes/header.php");
                 <h2 class="form-group">
                     <span>Horario:</span>
                     <horario id="Horario">
-                        <input type="time" min="08:00" max="22:00" name="horaEntrada" required/>
+                        <input type="time" min="08:00" max="22:00" name="horaEntrada" step="300" required/>
                         a
-                        <input type="time" min="08:00" max="22:00" name="horaSalida" required/>
+                        <input type="time" min="08:00" max="22:00" name="horaSalida" step="300" required/>
                     </horario>
                 </h2>
                 <br>

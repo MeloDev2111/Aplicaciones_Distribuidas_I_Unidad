@@ -11,19 +11,18 @@
     
     <body>
         <div class="navbar navbar-dark bg-dark justify-content-center">
-            <a href="/index.php" class="navbar-brand fs-1"> 
-            Nosotros | &nbsp;
-            </a>
-            <em>
-            <a href="/docs/registroAlumno.php" class="navbar-brand fs-1"> 
-            &nbsp; Alumnos 
-            </a>
-
-            <a href="/docs/registroCurso.php" class="navbar-brand fs-1"> 
-            &nbsp; Cursos 
-            </a>
-
-            <a href="/docs/registroNota.php" class="navbar-brand fs-1"> 
-            &nbsp; Notas 
-            </a>
+            <div class="row m-1">
+                <a href="/index.php" class="navbar-brand col fs-1"> 
+                Nosotros |
+                </a>
+                <a href="/docs/registroAlumno.php" class="navbar-brand col fs-1"> 
+                Alumnos 
+                </a>
+                <a href="/docs/registroCurso.php" class="navbar-brand col fs-1"> 
+                Cursos 
+                </a>
+                <a href="/docs/registroNota.php" class="navbar-brand col fs-1"> 
+                Notas 
+                </a>
+            </div>
         </div>

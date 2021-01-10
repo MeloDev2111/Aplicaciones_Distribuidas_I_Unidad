@@ -73,7 +73,3 @@
         </div>
     </div>
 </div>
-
-
-
-<?php include "../Includes/footer.php"?>

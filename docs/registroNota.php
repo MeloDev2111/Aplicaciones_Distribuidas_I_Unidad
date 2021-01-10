@@ -98,25 +98,25 @@ include ("Includes/header.php");
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 1:</span>
-                    <input type="number" min="0" max="20" class="form-control" name="nota1" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota1" autocomplete="calification" step="0.1"
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 2:</span>
-                    <input type="number" min="0" max="20" class="form-control" name="nota2" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota2" autocomplete="calification" step="0.1"
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 3:</span>
-                    <input type="number" min="0" max="20" class="form-control" name="nota3" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota3" autocomplete="calification" step="0.1"
                     maxlength="5" required />
                 </div>
 
                 <div class="input-group input-group-lg mb-3" >
                     <span class="input-group-text" id="inputGroup-sizing-lg">Nota 4:</span>
-                    <input type="number" min="0" max="20" class="form-control" name="nota4" autocomplete="calification" 
+                    <input type="number" min="0" max="20" class="form-control" name="nota4" autocomplete="calification" step="0.1"
                     maxlength="5" required />
                 </div>
 
